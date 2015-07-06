@@ -29,6 +29,7 @@ class RegionsController < ApplicationController
   # POST /regions.json
   def create
     @region = Region.new(region_params)
+    @region.user = current_user
 
     respond_to do |format|
       if @region.save
