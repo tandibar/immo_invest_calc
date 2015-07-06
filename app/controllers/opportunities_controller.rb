@@ -29,6 +29,7 @@ class OpportunitiesController < ApplicationController
   # POST /opportunities.json
   def create
     @opportunity = Opportunity.new(opportunity_params)
+    @opportunity.user = current_user
 
     respond_to do |format|
       if @opportunity.save
