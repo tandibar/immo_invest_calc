@@ -1,74 +1,48 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Opportunity -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Opportunity %></h1>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @opportunity.user %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:address) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.address %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:price_offering) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.price_offering %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:additional_expenses) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.additional_expenses %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:monthly_rent) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.monthly_rent %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:service_charges) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.service_charges %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:profit_method_1) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.profit_method_1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:profit_method_2) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.profit_method_2 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:qm) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.qm %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:administration_costs_in_percent) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.administration_costs_in_percent %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:equity) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.equity %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:bank_rate) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.bank_rate %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cash_flow) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.cash_flow %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @opportunity.name %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @opportunity.address %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              opportunities_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_opportunity_path(@opportunity), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              opportunity_path(@opportunity),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Price offering:</strong>
-  <%= @opportunity.price_offering %>
-</p>
-
-<p>
-  <strong>Additional expenses:</strong>
-  <%= @opportunity.additional_expenses %>
-</p>
-
-<p>
-  <strong>Monthly rent:</strong>
-  <%= @opportunity.monthly_rent %>
-</p>
-
-<p>
-  <strong>Service charges:</strong>
-  <%= @opportunity.service_charges %>
-</p>
-
-<p>
-  <strong>Profit method 1:</strong>
-  <%= @opportunity.profit_method_1 %>
-</p>
-
-<p>
-  <strong>Profit method 2:</strong>
-  <%= @opportunity.profit_method_2 %>
-</p>
-
-<p>
-  <strong>Qm:</strong>
-  <%= @opportunity.qm %>
-</p>
-
-<p>
-  <strong>Administration costs in percent:</strong>
-  <%= @opportunity.administration_costs_in_percent %>
-</p>
-
-<p>
-  <strong>Equity:</strong>
-  <%= @opportunity.equity %>
-</p>
-
-<p>
-  <strong>Bank rate:</strong>
-  <%= @opportunity.bank_rate %>
-</p>
-
-<p>
-  <strong>Cash flow:</strong>
-  <%= @opportunity.cash_flow %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @opportunity.name %>
-</p>
-
-<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
-<%= link_to 'Back', opportunities_path %>

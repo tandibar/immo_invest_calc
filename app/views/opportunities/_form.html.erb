@@ -1,24 +1,88 @@
-<%= simple_form_for(@opportunity) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.input :address %>
-    <%= f.input :price_offering %>
-    <%= f.input :additional_expenses %>
-    <%= f.input :monthly_rent %>
-    <%= f.input :service_charges %>
-    <%= f.input :profit_method_1 %>
-    <%= f.input :profit_method_2 %>
-    <%= f.input :qm %>
-    <%= f.input :administration_costs_in_percent %>
-    <%= f.input :equity %>
-    <%= f.input :bank_rate %>
-    <%= f.input :cash_flow %>
-    <%= f.input :name %>
+<%= form_for @opportunity, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :address, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :address, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price_offering, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :price_offering, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :additional_expenses, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :additional_expenses, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :monthly_rent, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :monthly_rent, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :service_charges, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :service_charges, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :profit_method_1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :profit_method_1, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :profit_method_2, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :profit_method_2, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :qm, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :qm, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :administration_costs_in_percent, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :administration_costs_in_percent, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :equity, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :equity, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :bank_rate, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :bank_rate, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cash_flow, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cash_flow, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  opportunities_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
