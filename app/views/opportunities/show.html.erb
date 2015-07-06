@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @opportunity.user %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @opportunity.address %>
+</p>
+
+<p>
+  <strong>Price offering:</strong>
+  <%= @opportunity.price_offering %>
+</p>
+
+<p>
+  <strong>Additional expenses:</strong>
+  <%= @opportunity.additional_expenses %>
+</p>
+
+<p>
+  <strong>Monthly rent:</strong>
+  <%= @opportunity.monthly_rent %>
+</p>
+
+<p>
+  <strong>Service charges:</strong>
+  <%= @opportunity.service_charges %>
+</p>
+
+<p>
+  <strong>Profit method 1:</strong>
+  <%= @opportunity.profit_method_1 %>
+</p>
+
+<p>
+  <strong>Profit method 2:</strong>
+  <%= @opportunity.profit_method_2 %>
+</p>
+
+<p>
+  <strong>Qm:</strong>
+  <%= @opportunity.qm %>
+</p>
+
+<p>
+  <strong>Administration costs in percent:</strong>
+  <%= @opportunity.administration_costs_in_percent %>
+</p>
+
+<p>
+  <strong>Equity:</strong>
+  <%= @opportunity.equity %>
+</p>
+
+<p>
+  <strong>Bank rate:</strong>
+  <%= @opportunity.bank_rate %>
+</p>
+
+<p>
+  <strong>Cash flow:</strong>
+  <%= @opportunity.cash_flow %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @opportunity.name %>
+</p>
+
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', opportunities_path %>

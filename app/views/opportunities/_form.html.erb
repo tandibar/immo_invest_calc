@@ -1,0 +1,24 @@
+<%= simple_form_for(@opportunity) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :address %>
+    <%= f.input :price_offering %>
+    <%= f.input :additional_expenses %>
+    <%= f.input :monthly_rent %>
+    <%= f.input :service_charges %>
+    <%= f.input :profit_method_1 %>
+    <%= f.input :profit_method_2 %>
+    <%= f.input :qm %>
+    <%= f.input :administration_costs_in_percent %>
+    <%= f.input :equity %>
+    <%= f.input :bank_rate %>
+    <%= f.input :cash_flow %>
+    <%= f.input :name %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
