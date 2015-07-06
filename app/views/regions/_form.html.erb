@@ -1,0 +1,17 @@
+<%= simple_form_for(@region) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :name %>
+    <%= f.input :qm_min %>
+    <%= f.input :qm_max %>
+    <%= f.input :multiplier_min %>
+    <%= f.input :multiplier_max %>
+    <%= f.input :multiplier_avg %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

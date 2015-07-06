@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @region.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @region.name %>
+</p>
+
+<p>
+  <strong>Qm min:</strong>
+  <%= @region.qm_min %>
+</p>
+
+<p>
+  <strong>Qm max:</strong>
+  <%= @region.qm_max %>
+</p>
+
+<p>
+  <strong>Multiplier min:</strong>
+  <%= @region.multiplier_min %>
+</p>
+
+<p>
+  <strong>Multiplier max:</strong>
+  <%= @region.multiplier_max %>
+</p>
+
+<p>
+  <strong>Multiplier avg:</strong>
+  <%= @region.multiplier_avg %>
+</p>
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %>
